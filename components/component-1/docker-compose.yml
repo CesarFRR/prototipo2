@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: gunicorn
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=sia_colegios
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_PORT=5432
+      - LOAD_INITIAL_DATA=true
+    depends_on:
+      - db
+    networks:
+      - sia_network
+
+  db:
+    image: postgres:17-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+    environment:
+      - POSTGRES_DB=sia_colegios
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_ENCODING=UTF8
+      - POSTGRES_LC_COLLATE=es_CO.utf8
+      - POSTGRES_LC_CTYPE=es_CO.utf8
+    ports:
+      - "5432:5432"
+    networks:
+      - sia_network
+
+volumes:
+  postgres_data:
+
+networks:
+  sia_network:
+    driver: bridge 

@@ -1,0 +1,849 @@
+type: collection.insomnia.rest/5.0
+name: Prototype 1
+meta:
+  id: wrk_6069d32c2cfa4da4a974ecfcf3b34586
+  created: 1746980025550
+  modified: 1747018130767
+collection:
+  - name: Component 2
+    meta:
+      id: fld_377b522e90dd4a108ee2e318dfeb5fc0
+      created: 1747665702306
+      modified: 1747665702306
+      sortKey: -1747665702306
+    children:
+      - url: http://localhost:8080/graphql
+        name: hello
+        meta:
+          id: req_eb9886a6e70444e88dad876322070067
+          created: 1746980067123
+          modified: 1747665716328
+          isPrivate: false
+          sortKey: -1747665707953
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"query {\n  holaMundo\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: profesores
+        meta:
+          id: req_6b910372cdf947c997b0124dfc2bbf9f
+          created: 1747007322800
+          modified: 1747665710723
+          isPrivate: false
+          sortKey: -1747665707903
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"query {\n  profesores
+            {\n    id\n    nombre\n    documento\n    area\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: crear profesores
+        meta:
+          id: req_7076d6ac1cb94cb58e38cf36ff8342ab
+          created: 1747007387209
+          modified: 1747665731623
+          isPrivate: false
+          sortKey: -1747665707703
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"mutation {\n  crearProfesor(\n    nombre: \"Luiz
+            Suarxs\",\n    documento: \"1022334490\",\n    area:
+            \"Quimica\"\n  ) {\n    id\n    nombre\n    area\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: actualizar profesores
+        meta:
+          id: req_1f28d53d96804e81828b922186803411
+          created: 1747007714406
+          modified: 1747665734816
+          isPrivate: false
+          sortKey: -1747665707603
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"mutation {\n  actualizarProfesor(\n    id:
+            \"6821382241541063a7c5abce\", \n    nombre: \"Nombre
+            modificado\",\n    area: \"Nueva Área\"\n  )
+            {\n    id\n    nombre\n    area\n    documento  \n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: crear asignatura
+        meta:
+          id: req_9f184221e6d9443bad468846d1404227
+          created: 1747013906239
+          modified: 1747665744114
+          isPrivate: false
+          sortKey: -1747665707503
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"mutation {\n  crearAsignatura(nombre: \"Sociales\")
+            {\n    id\n    nombre\n    profesorIds\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: asignatura
+        meta:
+          id: req_d4c7498ae97d4266bb5f57a746fb5007
+          created: 1747013937625
+          modified: 1747665750679
+          isPrivate: false
+          sortKey: -1747665707553
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"query {\n  asignaturas
+            {\n    id\n    nombre\n    profesorIds\n  }\n}\n"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: Registrar una calificación
+        meta:
+          id: req_617c6d0b1ed6436985954e5546c23234
+          created: 1747016754390
+          modified: 1747665755346
+          isPrivate: false
+          sortKey: -1747665707403
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"mutation {\n  registrarCalificacion(\n    estudianteId:
+            \"est-103\",\n    asignaturaId:
+            \"6821511f28e0f905850e9589\",\n    cursoId: \"11-A\",\n    periodo:
+            \"2025-2\",\n    nota: 4.7,\n    observaciones: \"Buen
+            desempeño\"\n  )
+            {\n    id\n    estudianteId\n    asignaturaId\n    nota\n    observaciones\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: Actualizar nota
+        meta:
+          id: req_af528453058d419ebe58a634a8f65096
+          created: 1747016868219
+          modified: 1747665761072
+          isPrivate: false
+          sortKey: -1747665707303
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"\n# 2) Actualizar nota\nmutation
+            {\n  actualizarCalificacion(\n    id:
+            \"68215d1cad2147413cbb7399\",\n    nota: 4.8\n  )
+            {\n    id\n    nota\n    observaciones\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: Eliminar una calificación
+        meta:
+          id: req_6f43386f2c264df2b8c4ba8f3d0576ea
+          created: 1747016920944
+          modified: 1747665765878
+          isPrivate: false
+          sortKey: -1747665707203
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"\n# 3) Eliminar\nmutation {\n  eliminarCalificacion(id:
+            \"68215d1cad2147413cbb7391\")\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: calificaciones
+        meta:
+          id: req_0c0b95f15a5f48069df94e4adfed71b4
+          created: 1747017014189
+          modified: 1747665776698
+          isPrivate: false
+          sortKey: -1747665707003
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"# 4) Listar todas (o con filtro)\nquery
+            {\n  calificaciones(periodo:\"2025-1\") {\n    id estudianteId
+            asignaturaId cursoId periodo nota observaciones\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: asignar profesor a asignatura
+        meta:
+          id: req_518e7463ee214c04aef728febce3b987
+          created: 1747153924731
+          modified: 1747665788271
+          isPrivate: false
+          sortKey: -1747665706903
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"mutation {  \n  asignarProfesorAAsignatura(  \n    profesorId:
+            \"68214a50e9033f34e2ec87c3\",   \n    asignaturaId:
+            \"6821511f28e0f905850e9589\"  \n  )
+            {  \n    id  \n    nombre  \n    profesorIds  \n  }  \n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: Eliminar un profesor
+        meta:
+          id: req_7db498a1355e43039e46e6c260373295
+          created: 1747249850107
+          modified: 1747665781012
+          isPrivate: false
+          sortKey: -1747665707578
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"\n# 3) Eliminar\nmutation {\n  eliminarProfesor(id:
+            \"68215d1cad2147413cbb7391\")\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/graphql
+        name: profesores por id
+        meta:
+          id: req_f572fdf2dcd44342acc0e0e34142d8a6
+          created: 1747361502225
+          modified: 1747665718964
+          isPrivate: false
+          sortKey: -1747665707803
+        method: POST
+        body:
+          mimeType: application/graphql
+          text: '{"query":"query {\n  profesorPorId(id: \"123\"){\n    id\n  }\n}"}'
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/hello
+        name: hello REST
+        meta:
+          id: req_017d1bd0d4a2448c8185506e00fa6a4f
+          created: 1747607517562
+          modified: 1747665800767
+          isPrivate: false
+          sortKey: -1747665708003
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: component-1
+    meta:
+      id: fld_bc933647476a43c49cc8aab61ffecef0
+      created: 1747666090498
+      modified: 1747666110045
+      sortKey: -1747666088531
+      description: API para el Sistema de Información Académica de Colegios
+    children:
+      - name: Cursos
+        meta:
+          id: fld_c56f4726d04a48718f4e703df499696b
+          created: 1747666090500
+          modified: 1747666090500
+          sortKey: -1747666088530
+        children:
+          - url: http://localhost:8000/api/cursos/
+            name: Listar todos los cursos
+            meta:
+              id: req_c87cbc44fe434497b63828e56c4366d6
+              created: 1747666090501
+              modified: 1747666090501
+              isPrivate: false
+              description: Obtiene un listado paginado de todos los cursos.
+              sortKey: -1747666088529
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/
+            name: Crear nuevo curso
+            meta:
+              id: req_10f5b829dbaf4f80be4ebcd73c71bd03
+              created: 1747666090502
+              modified: 1747666090502
+              isPrivate: false
+              description: Crea un nuevo curso
+              sortKey: -1747666088528
+            method: POST
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "nombre": "Décimo C",
+                    "codigo": "10-C"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/1/
+            name: Obtener detalles de un curso
+            meta:
+              id: req_17bc90cfd5ff4ecbb489f78d15ab9345
+              created: 1747666090503
+              modified: 1747666090503
+              isPrivate: false
+              description: Obtiene los detalles de un curso específico.
+              sortKey: -1747666088527
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/1/
+            name: Actualizar un curso
+            meta:
+              id: req_4f21bae5bcab41baa202181dd163eee9
+              created: 1747666090506
+              modified: 1747666090506
+              isPrivate: false
+              description: Actualiza todos los campos de un curso
+              sortKey: -1747666088526
+            method: PUT
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "nombre": "Primero A modificado",
+                    "codigo": "1-A"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/1/
+            name: Actualizar parcialmente un curso
+            meta:
+              id: req_dc6fa1fec6d04f609035ac83cd37089b
+              created: 1747666090507
+              modified: 1747666090507
+              isPrivate: false
+              description: Actualiza parcialmente un curso
+              sortKey: -1747666088525
+            method: PATCH
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "nombre": "Primero A modificado"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/6/
+            name: Eliminar un curso
+            meta:
+              id: req_d0f733832b8a4b73b5fac151307db91a
+              created: 1747666090508
+              modified: 1747666090508
+              isPrivate: false
+              description: Elimina un curso específico.
+              sortKey: -1747666088524
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/5/estudiantes/
+            name: Obtener estudiantes de un curso
+            meta:
+              id: req_4e97eabde1674d7d859b2026c17f120f
+              created: 1747666090510
+              modified: 1747666090510
+              isPrivate: false
+              description: Obtiene la lista de estudiantes asignados a un curso específico.
+              sortKey: -1747666088523
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/
+            name: Buscar cursos
+            meta:
+              id: req_0e596dfbdab4496482f2d4e8faac312e
+              created: 1747666090511
+              modified: 1747666090511
+              isPrivate: false
+              description: Busca cursos por nombre o código
+              sortKey: -1747666088522
+            method: GET
+            parameters:
+              - name: search
+                value: Primero
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/cursos/
+            name: Ordenar cursos
+            meta:
+              id: req_51aa22e0334a44aead403b4c3fd0f764
+              created: 1747666090512
+              modified: 1747666090512
+              isPrivate: false
+              description: Ordena los cursos por un campo específico
+              sortKey: -1747666088521
+            method: GET
+            parameters:
+              - name: ordering
+                value: codigo
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Estudiantes
+        meta:
+          id: fld_5e643e54924440e282c2dc4979a1e294
+          created: 1747666090514
+          modified: 1747666090514
+          sortKey: -1747666088520
+        children:
+          - url: http://localhost:8000/api/estudiantes/
+            name: Listar todos los estudiantes
+            meta:
+              id: req_73eb281a555345a8a69160d896288a8f
+              created: 1747666090515
+              modified: 1747666090515
+              isPrivate: false
+              description: Obtiene un listado paginado de todos los estudiantes.
+              sortKey: -1747666088519
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/
+            name: Crear nuevo estudiante
+            meta:
+              id: req_61cb7d9df0bf4884b443abce35bf3eff
+              created: 1747666090516
+              modified: 1747666090516
+              isPrivate: false
+              description: Crea un nuevo estudiante
+              sortKey: -1747666088518
+            method: POST
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "nombre_completo": "Nuevo Estudiante",
+                    "documento": "1001234573",
+                    "fecha_nacimiento": "2010-01-01",
+                    "acudiente": "Acudiente Ejemplo",
+                    "curso": 1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/1/
+            name: Obtener detalles de un estudiante
+            meta:
+              id: req_b0ceaf5260a54e1bb982635f6ba725d8
+              created: 1747666090518
+              modified: 1747666090518
+              isPrivate: false
+              description: Obtiene los detalles de un estudiante específico, incluyendo
+                información del curso.
+              sortKey: -1747666088517
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/1/
+            name: Actualizar parcialmente un estudiante
+            meta:
+              id: req_5da5d75a41a34e549bc6223459c8aaf1
+              created: 1747666090519
+              modified: 1747666090519
+              isPrivate: false
+              description: Actualiza parcialmente un estudiante
+              sortKey: -1747666088515
+            method: PATCH
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "acudiente": "Nuevo Acudiente"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/1/
+            name: Actualizar un estudiante
+            meta:
+              id: req_d1885f2943444feb82f46e304c9fa097
+              created: 1747666090519
+              modified: 1747666090519
+              isPrivate: false
+              description: Actualiza todos los campos de un estudiante
+              sortKey: -1747666088516
+            method: PUT
+            body:
+              mimeType: text/plain
+              text: |-
+                {
+                    "nombre_completo": "Ana María López Actualizado",
+                    "documento": "1001234567",
+                    "fecha_nacimiento": "2010-05-15",
+                    "acudiente": "María Rodríguez Nuevo",
+                    "curso": 2
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/7/
+            name: Eliminar un estudiante
+            meta:
+              id: req_8163fc19c9fe493e985d343728113703
+              created: 1747666090520
+              modified: 1747666090520
+              isPrivate: false
+              description: Elimina un estudiante específico.
+              sortKey: -1747666088514
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/por_curso/
+            name: Filtrar estudiantes por código de curso
+            meta:
+              id: req_0c4480b61ef24e9e9cb772a1b6c1f9ee
+              created: 1747666090521
+              modified: 1747666090521
+              isPrivate: false
+              description: Obtiene un listado de estudiantes filtrados por el código del
+                curso.
+              sortKey: -1747666088513
+            method: GET
+            parameters:
+              - name: codigo
+                value: 11-A
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/
+            name: Buscar estudiantes
+            meta:
+              id: req_cbda5f2f5ccf47818424061ed12ae145
+              created: 1747666090522
+              modified: 1747666090522
+              isPrivate: false
+              description: Busca estudiantes por nombre, documento o acudiente
+              sortKey: -1747666088512
+            method: GET
+            parameters:
+              - name: search
+                value: María
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/
+            name: Ordenar estudiantes
+            meta:
+              id: req_00f9f21f37d54719ac332cfa61ebc56b
+              created: 1747666090523
+              modified: 1747666090523
+              isPrivate: false
+              description: Ordena los estudiantes por un campo específico
+              sortKey: -1747666088511
+            method: GET
+            parameters:
+              - name: ordering
+                value: -fecha_nacimiento
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/estudiantes/
+            name: Paginación de estudiantes
+            meta:
+              id: req_e2fd6171767649d29b7ed4672a77b60a
+              created: 1747666090524
+              modified: 1747666090524
+              isPrivate: false
+              description: Obtiene una página específica de estudiantes
+              sortKey: -1747666088510
+            method: GET
+            parameters:
+              - name: page
+                value: "1"
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e937f00634495ccd3a97b6f326e8e2a6c328491f
+    created: 1746980025554
+    modified: 1746980025554
+environments:
+  name: Base Environment
+  meta:
+    id: env_e937f00634495ccd3a97b6f326e8e2a6c328491f
+    created: 1746980025552
+    modified: 1746980025552
+    isPrivate: false

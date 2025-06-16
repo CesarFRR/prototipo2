@@ -1,0 +1,400 @@
+{
+  "info": {
+    "name": "SIA Colegios API",
+    "description": "API para el Sistema de Información Académica de Colegios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cursos",
+      "item": [
+        {
+          "name": "Listar todos los cursos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", ""]
+            },
+            "description": "Obtiene un listado paginado de todos los cursos."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo curso",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Décimo C\",\n    \"codigo\": \"10-C\"\n}"
+            },
+            "description": "Crea un nuevo curso"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener detalles de un curso",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", "1", ""]
+            },
+            "description": "Obtiene los detalles de un curso específico."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un curso",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", "1", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Primero A modificado\",\n    \"codigo\": \"1-A\"\n}"
+            },
+            "description": "Actualiza todos los campos de un curso"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar parcialmente un curso",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", "1", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Primero A modificado\"\n}"
+            },
+            "description": "Actualiza parcialmente un curso"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar un curso",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/6/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", "6", ""]
+            },
+            "description": "Elimina un curso específico."
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener estudiantes de un curso",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/5/estudiantes/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", "5", "estudiantes", ""]
+            },
+            "description": "Obtiene la lista de estudiantes asignados a un curso específico."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar cursos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/?search=Primero",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", ""],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Primero"
+                }
+              ]
+            },
+            "description": "Busca cursos por nombre o código"
+          },
+          "response": []
+        },
+        {
+          "name": "Ordenar cursos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/cursos/?ordering=codigo",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "cursos", ""],
+              "query": [
+                {
+                  "key": "ordering",
+                  "value": "codigo"
+                }
+              ]
+            },
+            "description": "Ordena los cursos por un campo específico"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Estudiantes",
+      "item": [
+        {
+          "name": "Listar todos los estudiantes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", ""]
+            },
+            "description": "Obtiene un listado paginado de todos los estudiantes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo estudiante",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_completo\": \"Nuevo Estudiante\",\n    \"documento\": \"1001234573\",\n    \"fecha_nacimiento\": \"2010-01-01\",\n    \"acudiente\": \"Acudiente Ejemplo\",\n    \"curso\": 1\n}"
+            },
+            "description": "Crea un nuevo estudiante"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener detalles de un estudiante",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", "1", ""]
+            },
+            "description": "Obtiene los detalles de un estudiante específico, incluyendo información del curso."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un estudiante",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", "1", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_completo\": \"Ana María López Actualizado\",\n    \"documento\": \"1001234567\",\n    \"fecha_nacimiento\": \"2010-05-15\",\n    \"acudiente\": \"María Rodríguez Nuevo\",\n    \"curso\": 2\n}"
+            },
+            "description": "Actualiza todos los campos de un estudiante"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar parcialmente un estudiante",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/1/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", "1", ""]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"acudiente\": \"Nuevo Acudiente\"\n}"
+            },
+            "description": "Actualiza parcialmente un estudiante"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar un estudiante",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/7/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", "7", ""]
+            },
+            "description": "Elimina un estudiante específico."
+          },
+          "response": []
+        },
+        {
+          "name": "Filtrar estudiantes por código de curso",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/por_curso/?codigo=11-A",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", "por_curso", ""],
+              "query": [
+                {
+                  "key": "codigo",
+                  "value": "11-A"
+                }
+              ]
+            },
+            "description": "Obtiene un listado de estudiantes filtrados por el código del curso."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar estudiantes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/?search=María",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", ""],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "María"
+                }
+              ]
+            },
+            "description": "Busca estudiantes por nombre, documento o acudiente"
+          },
+          "response": []
+        },
+        {
+          "name": "Ordenar estudiantes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/?ordering=-fecha_nacimiento",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", ""],
+              "query": [
+                {
+                  "key": "ordering",
+                  "value": "-fecha_nacimiento"
+                }
+              ]
+            },
+            "description": "Ordena los estudiantes por un campo específico"
+          },
+          "response": []
+        },
+        {
+          "name": "Paginación de estudiantes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8000/api/estudiantes/?page=1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "estudiantes", ""],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Obtiene una página específica de estudiantes"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+} 

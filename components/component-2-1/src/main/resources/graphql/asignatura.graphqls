@@ -1,0 +1,19 @@
+# asignatura.graphqls
+
+extend type Query {
+  asignaturas: [Asignatura!]!
+}
+
+extend type Mutation {
+  crearAsignatura(nombre: String!): Asignatura!
+  actualizarAsignatura(id: ID!, nombre: String): Asignatura!
+  eliminarAsignatura(id: ID!): Boolean!
+  asignarProfesorAAsignatura(profesorId: ID!, asignaturaId: ID!): Asignatura!
+  desasignarProfesorDeAsignatura(profesorId: ID!, asignaturaId: ID!): Asignatura!
+}
+
+type Asignatura {
+  id: ID!
+  nombre: String!
+  profesorIds: [ID!]!
+}

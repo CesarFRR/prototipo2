@@ -1,0 +1,54 @@
+# graphql/calificacion.graphqls
+
+extend type Query {
+  """
+  Lista todas las calificaciones, opcionalmente filtrando.
+  """
+  calificaciones(
+    estudianteId: ID,
+    asignaturaId: ID,
+    cursoId: ID,
+    periodo: String
+  ): [Calificacion!]!
+}
+
+extend type Mutation {
+  """
+  Registra una calificación nueva.
+  """
+  registrarCalificacion(
+    estudianteId: ID!,
+    asignaturaId: ID!,
+    cursoId: ID!,
+    periodo: String!,
+    nota: Float!,
+    observaciones: String
+  ): Calificacion!
+
+  """
+  Modifica la nota y/o observaciones de una calificación existente.
+  """
+  actualizarCalificacion(
+    id: ID!,
+    nota: Float,
+    observaciones: String
+  ): Calificacion!
+
+  """
+  Elimina una calificación por su ID.
+  """
+  eliminarCalificacion(id: ID!): Boolean!
+}
+
+"""
+Tipo que representa una calificación de un estudiante en una asignatura y curso.
+"""
+type Calificacion {
+  id: ID!
+  estudianteId: ID!
+  asignaturaId: ID!
+  cursoId: ID!
+  periodo: String!
+  nota: Float!
+  observaciones: String
+}

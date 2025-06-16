@@ -1,0 +1,9 @@
+# schema.graphqls
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+# Root types “vacíos”, para luego extenderlos
+type Query
+type Mutation
