@@ -326,7 +326,8 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
 
 ### Decomposition Structure
 #### Decomposition View
-![image](https://github.com/user-attachments/assets/c1b9300e-fadd-4074-a851-445883f9a7e2)
+
+![Diagrama de Descompocicion2](https://github.com/user-attachments/assets/0a7d19bb-a6c7-454d-8308-0dd226006d09)
 
 
 
