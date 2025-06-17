@@ -9,7 +9,6 @@
 - Integrantes: 
     - David Stiven Martinez Triana 
     - Carlos Sebastian Gomez Fernandez 
-    - Daniel Fernando Mateus Vega 
     - Nestor Steven Piraquive Garzon 
     - Luis Alfonso Pedraos Suarez 
     - Cesar Fabian Rincon Robayo 
@@ -178,7 +177,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 ### Deployment Structure
 #### Deployment View
 
-![Diagrama de Despliegue](https://github.com/user-attachments/assets/78545352-e876-4337-a016-48431ff80427)
+![Diagrama de Despliegue (1)](https://github.com/user-attachments/assets/15383adf-be29-48fd-be31-c21036043a0b)
+
 
 
 Este sistema está compuesto por múltiples microservicios y componentes backend que se ejecutan dentro de una red interna Docker, y un componente cliente desarrollado con Electron.js, que opera desde el dispositivo del usuario final como aplicación de escritorio. Todos los servicios están expuestos por distintos puertos y protocolos, y se comunican mediante HTTP, AMQP o TCP/IP.
