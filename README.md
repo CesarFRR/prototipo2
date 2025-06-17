@@ -26,7 +26,9 @@
 
 ### Component-and Connector (C&C) Structure
 **C&C View**
-![image](https://github.com/user-attachments/assets/5dfe302b-2cb0-4190-8594-a60dd7a8362c)
+
+
+![capasfinal](https://github.com/user-attachments/assets/a7181fff-5a58-413f-865b-a9ef8f1d5f0e)
 
 
 #### **Description of architectural styles and patterns used.**
@@ -148,7 +150,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 ### Layered Structure
 #### Layered View:
-![layered 2](https://github.com/user-attachments/assets/a8394cd9-174a-481f-9b28-e3fadae4f691)
+
+![capasfinal](https://github.com/user-attachments/assets/0dfcaa97-7a1c-46d6-9637-12e11d412f0e)
 
 
 
@@ -178,7 +181,7 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 ### Deployment Structure
 #### Deployment View
 
-![Diagrama de Despliegue (1)](https://github.com/user-attachments/assets/15383adf-be29-48fd-be31-c21036043a0b)
+![Diagrama de Despliegue (2)final](https://github.com/user-attachments/assets/56180475-1806-436c-a7de-9b4711543ced)
 
 
 
