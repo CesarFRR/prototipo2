@@ -16,6 +16,7 @@
 ### 2. **Software System** 
 - name: Gradex 
 - Logo:
+  
 ![image](https://github.com/user-attachments/assets/b3657f68-ea46-4990-8fa8-a0c4b5c26e13)
 
 
@@ -177,7 +178,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 ### Deployment Structure
 #### Deployment View
 
-![desplieguep2](https://github.com/user-attachments/assets/9a2ac23b-d1a7-4d8f-bb14-9ef646c5b438)
+![Diagrama de Despliegue](https://github.com/user-attachments/assets/78545352-e876-4337-a016-48431ff80427)
+
 
 Este sistema está compuesto por múltiples microservicios y componentes backend que se ejecutan dentro de una red interna Docker, y un componente cliente desarrollado con Electron.js, que opera desde el dispositivo del usuario final como aplicación de escritorio. Todos los servicios están expuestos por distintos puertos y protocolos, y se comunican mediante HTTP, AMQP o TCP/IP.
 
@@ -333,7 +335,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
 * **GX\_FE\_Gradex**: Es el componente frontend del sistema GRADEX para una web app, encargado de la interfaz de usuario donde estudiantes, profesores y administradores interactúan con la plataforma. Proporciona formularios, listados y visualización de datos, comunicándose con el API Gateway para realizar todas las operaciones.
 
 
-* **GX\_WD\_Gradex**: Es el componente frontend del sistema GRADEX para una aplicación de escritorio, encargado de la interfaz de usuario donde estudiantes, profesores y administradores interactúan con la plataforma. Proporciona formularios, listados y visualización de datos, comunicándose con el API Gateway para realizar todas las operacionesl.
+* **GX\_WD\_Gradex**: Es el componente frontend del sistema GRADEX para una aplicación de escritorio, encargado de la interfaz de usuario donde estudiantes, profesores y administradores interactúan con la plataforma. Proporciona formularios, listados y visualización de datos, comunicándose con el API Gateway para realizar todas las operaciones.
 
 
 * **gx\_api\_gateway**: Actúa como intermediario entre el frontend y los microservicios backend. Centraliza todas las solicitudes, enrutándolas al servicio correspondiente y manejando aspectos como autenticación y unificación de respuestas para simplificar la comunicación.
