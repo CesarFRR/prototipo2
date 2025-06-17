@@ -181,7 +181,7 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 Este sistema está compuesto por múltiples microservicios y componentes backend que se ejecutan dentro de una red interna Docker, y un componente cliente desarrollado con Electron.js, que opera desde el dispositivo del usuario final como aplicación de escritorio. Todos los servicios están expuestos por distintos puertos y protocolos, y se comunican mediante HTTP, AMQP o TCP/IP.
 
-### **Cliente de Escritorio \- Electron.js**
+ **Cliente de Escritorio \- Electron.js**
 
 * **Tipo**: Aplicación de escritorio.  
 * **Tecnología**: Electron.js (Node.js \+ Chromium)  
@@ -191,11 +191,11 @@ Este sistema está compuesto por múltiples microservicios y componentes backend
   * Se conecta a múltiples servicios del backend mediante HTTP, AMQP o TCP/IP.  
   * Sirve como punto de entrada principal del sistema para los usuarios finales.
 
-### **Red Interna Docker**
+ **Red Interna Docker**
 
 Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en una red interna aislada que permite la comunicación entre servicios por nombre y puerto.
 
-### **1\. GX\_BE\_Auth (Go)**
+ **1\. GX\_BE\_Auth (Go)**
 
 **Nombre del contenedor:** gx\_be\_auth  
  **Tecnología:** Go
@@ -204,7 +204,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Microservicio de Autenticación  
  **Responsabilidad:** Gestiona autenticación, registro, validación de credenciales, emisión de tokens JWT, y mantiene la seguridad del sistema mediante el control de acceso.
 
-### **2\. GX\_BE\_EstCur (Django/Python)**
+ **2\. GX\_BE\_EstCur (Django/Python)**
 
 **Nombre del contenedor:** gx\_be\_estcur  
  **Tecnología:** Django (Python)
@@ -213,7 +213,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Microservicio de Gestión de Estudiantes y Cursos  
  **Responsabilidad:** Manejo de operaciones CRUD relacionadas con estudiantes y cursos, administración de perfiles estudiantiles y organización académica básica.
 
-### **3\. GX\_BE\_ProAsig (Spring Boot/Java)**
+ **3\. GX\_BE\_ProAsig (Spring Boot/Java)**
 
 **Nombre del contenedor:** gx\_be\_proasig  
  **Tecnología:** Spring Boot (Java)
@@ -222,7 +222,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Microservicio de Gestión de Profesores y Asignaturas  
  **Responsabilidad:** Administración de los docentes y sus asignaturas asociadas. Permite crear, modificar, consultar y eliminar la información académica del personal docente.
 
-### **4\. GX\_BE\_Calif (Spring Boot/Java)**
+ **4\. GX\_BE\_Calif (Spring Boot/Java)**
 
 **Nombre del contenedor:** gx\_be\_calif  
  **Tecnología:** Spring Boot (Java)
@@ -231,7 +231,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Microservicio de Calificaciones  
  **Responsabilidad:** Control de las notas de los estudiantes: creación, modificación, consulta y almacenamiento seguro de calificaciones académicas.
 
-### **5\. GX\_FE\_Gradex (Next.js/React)**
+ **5\. GX\_FE\_Gradex (Next.js/React)**
 
 **Nombre del contenedor:** gx\_fe\_gradex  
  **Tecnología:** Next.js (React)
@@ -240,7 +240,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Cliente Web  
  **Responsabilidad:** Proporciona la interfaz gráfica del sistema GRADEX accesible desde navegadores web para estudiantes, profesores y administradores.
 
-### **6\. GX\_FE\_Gradex\_Desktop (Electron.js)**
+ **6\. GX\_FE\_Gradex\_Desktop (Electron.js)**
 
 **Nombre del contenedor:** GX\_FE\_Gradex\_Desktop  
  **Tecnología:** Electron.js
@@ -249,7 +249,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Cliente de Escritorio  
  **Responsabilidad:** Interfaz nativa multiplataforma instalada en el dispositivo del usuario final. Permite interacción con el sistema mediante GUI conectándose al API Gateway.
 
-### **7\. gx\_api\_gateway (Node.js/Apollo Server)**
+ **7\. gx\_api\_gateway (Node.js/Apollo Server)**
 
 **Nombre del contenedor:** gx\_api\_gateway  
  **Tecnología:** Node.js \+ Apollo Server
@@ -258,7 +258,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** API Gateway  
  **Responsabilidad:** Punto único de entrada al backend. Orquesta peticiones de frontends a microservicios. Expone GraphQL y maneja autenticación, validación y delegación de llamadas.
 
-### **8\. gx\_be\_comun\_async (Node.js)**
+ **8\. gx\_be\_comun\_async (Node.js)**
 
 **Nombre del contenedor:** gx\_be\_comun\_async  
  **Tecnología:** Node.js (Express.js)
@@ -267,7 +267,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Broker HTTP Asíncrono  
  **Responsabilidad:** Recibe eventos desde RabbitMQ y los retransmite al microservicio gx\_be\_calif por HTTP, facilitando una arquitectura basada en eventos.
 
-### **9\. gx\_be\_rabbitmq (RabbitMQ)**
+ **9\. gx\_be\_rabbitmq (RabbitMQ)**
 
 **Nombre del contenedor:** gx\_be\_rabbitmq  
  **Tecnología:** RabbitMQ
@@ -276,7 +276,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Sistema de Mensajería Asíncrona  
  **Responsabilidad:** Actúa como cola de mensajes AMQP para desacoplar procesos. Recibe, mantiene y entrega mensajes entre servicios de manera fiable y asincrónica.
 
-### **10\. GX\_DB\_Auth (PostgreSQL)**
+ **10\. GX\_DB\_Auth (PostgreSQL)**
 
 **Nombre del contenedor:** gx\_db\_auth  
  **Tecnología:** PostgreSQL
@@ -285,7 +285,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Base de Datos de Autenticación  
  **Responsabilidad:** Almacena usuarios, credenciales, roles y tokens de sesión relacionados con el servicio de autenticación.
 
-### **11\. GX\_DB\_EstCur (PostgreSQL)**
+ **11\. GX\_DB\_EstCur (PostgreSQL)**
 
 **Nombre del contenedor:** gx\_db\_estcur  
  **Tecnología:** PostgreSQL
@@ -294,7 +294,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Base de Datos de Estudiantes y Cursos  
  **Responsabilidad:** Persistencia estructurada de la información académica básica como estudiantes y cursos.
 
-### **12\. GX\_DB\_ProAsig (MongoDB)**
+ **12\. GX\_DB\_ProAsig (MongoDB)**
 
 **Nombre del contenedor:** gx\_db\_proasig  
  **Tecnología:** MongoDB
@@ -303,7 +303,7 @@ Contiene todos los contenedores y servicios backend. Se encuentra encapsulada en
  **Rol:** Base de Datos de Profesores y Asignaturas  
  **Responsabilidad:** Almacena datos académicos del personal docente y sus materias de forma flexible usando documentos JSON.
 
-### **13\. GX\_DB\_Calif (MongoDB)**
+ **13\. GX\_DB\_Calif (MongoDB)**
 
 **Nombre del contenedor:** gx\_db\_calif  
  **Tecnología:** MongoDB
