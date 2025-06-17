@@ -1,8 +1,8 @@
 # GRADEX - Prototipo 2
 
 
+![image](https://github.com/user-attachments/assets/d511ece6-bccb-4a01-a9cb-1f46cc898cae)
 
-![alt text](image-1.png)
 
 ### 1. **Team** 
 - name: 2F  
@@ -16,7 +16,8 @@
 ### 2. **Software System** 
 - name: Gradex 
 - Logo:
- ![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/b3657f68-ea46-4990-8fa8-a0c4b5c26e13)
+
 
 - Description: Sistema de Gestión de calificaciones para colegios.
 
@@ -25,7 +26,8 @@
 
 ### Component-and Connector (C&C) Structure
 **C&C View**
-![alt text](<Copy of Diagrama C&C.png>)
+![image](https://github.com/user-attachments/assets/67f2d969-16a3-4426-8f9f-931e8f8ef68c)
+
 
 
 #### **Description of architectural styles and patterns used.**
@@ -147,7 +149,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 ### Layered Structure
 #### Layered View:
-![alt text](<layered 2.png>)
+![image](https://github.com/user-attachments/assets/4aa3efe0-1d6c-4a73-a4af-147f41a242ab)
+
 
 ####  Description:
 
@@ -174,7 +177,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 ### Decomposition Structure
 #### Decomposition View
-![alt text](<Diagrama de Descompocicion (1).png>)
+![image](https://github.com/user-attachments/assets/07cbd919-d8ce-474c-a8f0-ae40c92ec9c8)
+
 
 
 #### Description of architectural elements and relations:
