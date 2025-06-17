@@ -26,8 +26,7 @@
 
 ### Component-and Connector (C&C) Structure
 **C&C View**
-![image](https://github.com/user-attachments/assets/67f2d969-16a3-4426-8f9f-931e8f8ef68c)
-
+![image](https://github.com/user-attachments/assets/5dfe302b-2cb0-4190-8594-a60dd7a8362c)
 
 
 #### **Description of architectural styles and patterns used.**
