@@ -148,7 +148,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 ### Layered Structure
 #### Layered View:
-![image](https://github.com/user-attachments/assets/4aa3efe0-1d6c-4a73-a4af-147f41a242ab)
+![layered 2](https://github.com/user-attachments/assets/a8394cd9-174a-481f-9b28-e3fadae4f691)
+
 
 
 ####  Description:
