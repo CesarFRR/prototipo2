@@ -28,7 +28,8 @@
 **C&C View**
 
 
-![capasfinal](https://github.com/user-attachments/assets/a7181fff-5a58-413f-865b-a9ef8f1d5f0e)
+![cycfinal](https://github.com/user-attachments/assets/000fc392-acd7-466f-8cff-4224c9d8cd1f)
+
 
 
 #### **Description of architectural styles and patterns used.**
