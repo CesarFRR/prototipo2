@@ -177,7 +177,8 @@ Conexión: Comunicación directa TCP/IP con GX_BE_Auth.
 
 ### Decomposition Structure
 #### Decomposition View
-![image](https://github.com/user-attachments/assets/07cbd919-d8ce-474c-a8f0-ae40c92ec9c8)
+![image](https://github.com/user-attachments/assets/c1b9300e-fadd-4074-a851-445883f9a7e2)
+
 
 
 
